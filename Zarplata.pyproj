@@ -34,7 +34,6 @@
     <Content Include="password.txt" />
     <Content Include="raha.txt" />
     <Content Include="topfamily.txt" />
-    <Content Include="top.txt" />
     <Content Include="topnormal.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
