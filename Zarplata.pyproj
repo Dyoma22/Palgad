@@ -5,7 +5,7 @@
     <ProjectGuid>4d6c42a9-12f7-47e0-87d2-e8885cbcb31a</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>Zarplata.py</StartupFile>
+    <StartupFile>Palgad.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,14 +22,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Funktsioonid.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="palga.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Zarplata.py" />
+    <Compile Include="Palgad.py" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Inimesed.txt" />
-    <Content Include="palk.txt" />
+    <Content Include="adminlogin.txt" />
+    <Content Include="passwordadmin.txt" />
+    <Content Include="password.txt" />
+    <Content Include="raha.txt" />
+    <Content Include="top.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

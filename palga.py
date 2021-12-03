@@ -1,29 +1,38 @@
    
-def lisamine(i,p): 
+#def loe_failist(file:str)->str:
+#    """Loeme tekst failist
+#    """
+#    f=open(file, "r")
+#    stroka=f.read() #str Делает каждый текст с промежутком
+#    #stroka=f.readlines() list Делает текст в одной линии
+#   f.close()
+#    return stroka
+#stroka=loe_failist("TextFile.txt")
+#print(stroka)
+#
+def loe_failist_listisse(file:str)->list:
+    """Loeme tekst failist ja salvesta järjendisse
     """
-    i-inimeste nimikiri,p-palka nimikiri 
-    """
-    kogus = int(input("Lisa inimest: "))
-    for j in range(kogus):
-        nimi = input("Nimi: ")
-        i.append(nimi)
-        palgad = int(input("Palk: "))
-        p.append(palk)
-        return i,p
-def otsing_nimi_jargi(inimesed:list,palgad:list):
-    """Tagastame jäejend või tekst
-    :rtype var: tulemus
-    """
-    nimi=input("Keda otsime?")
-    for inimene in inimesed:
-        if inimene==nimi:
-            n=inimesed.count(nimi)
-            print("Inimene on olemas,selline kohtume",n,"korda")
-            b=-1
-            for i in range(n):
-                k=inimesed.index(nimi,b)
-                palk=palgad[k]
-                print(nimi,palk)
-        else:
-             t="Ei ole nimekirjas"
-    return t
+    f=open(file, "r")
+    list_=[]
+    for stroka in f:
+        list_.append(stroka.strip())
+    f.close()
+    return list_
+spisok=loe_failist_listisse
+print(spisok)
+
+#def salvesta_failisse(fail:str):
+#    f=open(fail, "a")
+#    text=input("Sisesta tekst:")
+#    f.write(text+"\n")
+#    f.close()
+#for i in range(1): 
+#    salvesta_failisse("Loetelu.txt")
+
+#def faili_sisu_umberkirjutamine(file:str,):
+#    text=input("Sisesta uus tekst:")
+#    with open(file, "w") as f:
+#        f.write(text+"\n")
+#faili_sisu_umberkirjutamine(input("Faili nimetus")+".txt")
+#print()
