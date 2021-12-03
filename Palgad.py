@@ -5,25 +5,25 @@ inimesed=loe_failist_listisse("inimesed.txt")#Tavatöötajate sisselogimised
 adminpasswords=loe_failist_listisse("passwordadmin.txt")#Parool administraatori kontole sisenemiseks
 normpassword=loe_failist_listisse("password.txt")#Parool tavalise konto sisestamiseks 
 
-while True:
-	print("Kuhu soovite siseneda?\nKasutaja - [1]\nAdministrator - [2]")
-	v=int(input())
-	print("Ühendame serveriga\n")
-	if v==1:
-		print("Kasutaja sisselogimine")
+while True:#lõputu tsükkel kuni toimingu sooritamiseni või kuni selle lõpuni
+	print("Kuhu soovite siseneda?\nKasutaja - [1]\nAdministrator - [2]")#kirjutab teksti ja pakub valida administraatori või kasutaja
+	v=int(input())#peamine märk
+	print("Ühendame serveriga\n")#kirjutab teksti
+	if v==1:#Logi sisse töötajana
+		print("Kasutaja sisselogimine")#kirjutab teksti
 		while 1:
-			log=input("Sisesta kasutajanimi:")
-			if log in inimesed:
-				print("Sisselogimine õige.")
-				break
-			elif log not in inimesed:
-				print("Sisselogimine ei õige.")
+			log=input("Sisesta kasutajanimi:")#kirjutab tekssti ja küsib sisselogimist
+			if log in inimesed:#kui sisselogimine on tekstifailis, siis on kõik edukas
+				print("Sisselogimine õige.")#kui kõik on ok, siis kirjuta, mis on õige
+				break#katkestab tsükli
+			elif log not in inimesed:#kui nimekirjas pole sisselogimist, ütleb ta, et sellist sisselogimist pole
+				print("Sisselogimine ei õige.")#kirjutab teksti
 		while 1:
 			pas=input("Sisestage parool:")
 			if pas in normpassword:
-				print("Olete sisse logitud, tere tulemast!")
+				print("Olete sisse logitud, tere tulemast!")#kirjutab teksti ja kui parool on tekstifailis, jäetakse see vahele
 				break
-			elif pas not in normpassword:
+			elif pas not in normpassword:#kirjutab tektsi ja kui parooli pole, ei lähe see läbi
 				print("Vale salasõna")
 	elif v==2:
 		print("Administraatori sisselogimine.")

@@ -3,8 +3,8 @@
 #    """Loeme tekst failist
 #    """
 #    f=open(file, "r")
-#    stroka=f.read() #str Делает каждый текст с промежутком
-#    #stroka=f.readlines() list Делает текст в одной линии
+#    stroka=f.read() #str #Muudab iga teksti vahedega
+#    #stroka=f.readlines() list #Teeb teksti üherealiseks
 #   f.close()
 #    return stroka
 #stroka=loe_failist("TextFile.txt")

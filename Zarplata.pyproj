@@ -22,9 +22,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Funktsioonid.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="palga.py">
       <SubType>Code</SubType>
     </Compile>
