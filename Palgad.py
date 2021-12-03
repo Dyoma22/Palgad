@@ -25,10 +25,10 @@ while True:
 				break
 			elif pas not in normpassword:
 				print("Vale salasõna")
-	elif v==2:#Logi sisse administraatorina
+	elif v==2:
 		print("Administraatori sisselogimine.")
 		while 1:
-			log=input("Sisestage administraatori sisselogimine:")#Писать Sergei, другое не примит
+			log=input("Sisestage administraatori sisselogimine:")
 			if log in admin:
 				print("Sisselogimine õige.")
 				break
@@ -43,26 +43,39 @@ while True:
 				print("Vale salasõna")
 		break
 while True:
-	print("Valikud.\nTöötajate nimekiri-[0]\nPalk-[1]\nTipptöötajad-[2]\nTipprikkad ja vaesed-[3]")
+	print()
+	print("Valikud.\nTöötajate nimekiri - [0]\nPalk - [1]\nTipptöötajad - [2]\nTipprikkad ja vaesed - [3]\nKeskmine palk - [4]")
 	n=int(input())
 	if n==0:
-		print("Logige sisse töötajate nimekirja")
-		with open("inimesed.txt", "r") as reader:#Читает содержимое файла и выводим на экран
+		print()
+		print("success")
+		print()
+		with open("inimesed.txt", "r") as reader:
 			print(reader.read())
 	elif n==1:
-		print("Logi sisse palgasüsteemi")
+		print()
+		print("Success")
+		print()
 		with open("raha.txt", "r") as reader:
 			print(reader.read())
 	elif n==2:
-		print("Parima töötaja sisselogimine")
+		print()
+		print("Success")
+		print()
 		with open("top.txt", "r") as reader:
 			print(reader.read())
 	elif n==3:
-		print("Parima töötaja sisselogimine")
+		print()
+		print("Success")
+		print()
 		with open("topfamily.txt", "r") as reader:
 			print(reader.read())
 	elif n==4:
-		print("Parima töötaja sisselogimine")
-		with open("topfamily.txt", "r") as reader:
+		print()
+		print("Success")
+		print()
+		with open("topnormal.txt", "r") as reader:
 			print(reader.read())
+	
+
 

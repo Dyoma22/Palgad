@@ -10,9 +10,7 @@ def passautomat()->str:
 	str4 = str0+str1+str2+str3
 	ls = list(str4) # список [".",",",":"...]
 	random.shuffle(ls) #перемешаем
-# Извлекаем из списка 12 произвольных значений
 	psword = ''.join([random.choice(ls) for x in range(12)])
-# Пароль готов
 	return psword
 def paskontroll(psword: str)->bool:
 	ls=list(psword)
