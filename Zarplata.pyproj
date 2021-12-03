@@ -22,7 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="palga.py">
+    <Compile Include="module.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Palgad.py" />

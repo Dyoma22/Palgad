@@ -1,11 +1,11 @@
-from palga import *
+from module import *
 admin=loe_failist_listisse("adminlogin.txt")#Administraatori kontole sisenemiseks logige sisse
 inimesed=loe_failist_listisse("inimesed.txt")#Tavatöötajate sisselogimised
 adminpasswords=loe_failist_listisse("passwordadmin.txt")#Parool administraatori kontole sisenemiseks
 normpassword=loe_failist_listisse("password.txt")#Parool tavalise konto sisestamiseks 
 
 while True:#lõputu tsükkel kuni toimingu sooritamiseni või kuni selle lõpuni
-	print("Kuhu soovite siseneda?\nKasutaja - [1]\nAdministrator - [2]")#kirjutab teksti ja pakub valida administraatori või kasutaja
+	print("Kasutaja - [1]\nAdministrator - [2]")#kirjutab teksti ja pakub valida administraatori või kasutaja
 	v=int(input())#peamine märk
 	print("Ühendame serveriga\n")#kirjutab teksti
 	if v==1:#Logi sisse töötajana
