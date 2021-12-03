@@ -43,7 +43,7 @@ while True:#lõputu tsükkel kuni toimingu sooritamiseni või kuni selle lõpuni
 		break
 while True:
 	print()
-	print("Valikud.\nTöötajate nimekiri - [0]\nPalk - [1]\nTipptöötajad - [2]\nTipprikkad ja vaesed - [3]\nKeskmine palk - [4]")#Küsib valida kõigi loetletud funktsioonide hulgast
+	print("Valikud.\nTöötajate nimekiri - [0]\nPalk - [1]\nTipprikkad ja vaesed - [2]\nKeskmine palk - [3]")#Küsib valida kõigi loetletud funktsioonide hulgast
 	n=int(input())
 	if n==0:
 		print()
@@ -61,19 +61,13 @@ while True:
 		print()
 		print("Success")
 		print()
-		with open("top.txt", "r") as reader:#Näitab töötajate palka
+		with open("topfamily.txt", "r") as reader:#Näitab vaeste ja rikaste tippu
 			print(reader.read())
 	elif n==3:
 		print()
 		print("Success")
 		print()
-		with open("topfamily.txt", "r") as reader:#Näitab vaeste ja rikaste tippu
-			print(reader.read())
-	elif n==4:
-		print()
-		print("Success")
-		print()
-		with open("topnormal.txt", "r") as reader:#Näitab keskmist palka
+		with open("topnormal.txt", "r") as reader:#
 			print(reader.read())
 	
 
