@@ -1,4 +1,3 @@
-from Funktsioonid import *
 from palga import *
 admin=loe_failist_listisse("adminlogin.txt")#Administraatori kontole sisenemiseks logige sisse
 inimesed=loe_failist_listisse("inimesed.txt")#Tavatöötajate sisselogimised
