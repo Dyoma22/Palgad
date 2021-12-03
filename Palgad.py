@@ -1,62 +1,68 @@
 from Funktsioonid import *
 from palga import *
-import time
-Admin=loe_failist_listisse("adminlogin.txt")#Логин для входа в админ аккаунт
-Inimesed=loe_failist_listisse("inimesed.txt")#Логины для обычного персонала
-APasswords=loe_failist_listisse("passwordadmin.txt")#Пароль для входа в админ аккаунт
-Passwords=loe_failist_listisse("password.txt")#Пароль для входа в обычный аккаунт 
+admin=loe_failist_listisse("adminlogin.txt")#Administraatori kontole sisenemiseks logige sisse
+inimesed=loe_failist_listisse("inimesed.txt")#Tavatöötajate sisselogimised
+adminpasswords=loe_failist_listisse("passwordadmin.txt")#Parool administraatori kontole sisenemiseks
+normpassword=loe_failist_listisse("password.txt")#Parool tavalise konto sisestamiseks 
 
 while True:
-	print("Куда хотите войти?\nПользоватьель-[0]\nАдминистратор-[1]")
+	print("Kuhu soovite siseneda?\nKasutaja - [1]\nAdministrator - [2]")
 	v=int(input())
-	print("Идет вход...\n")
-	print("Синхронизация данных...\n")
-	if v==0:
-		print("Вход Пользователя...")
+	print("Ühendame serveriga\n")
+	if v==1:
+		print("Kasutaja sisselogimine")
 		while 1:
-			log=input("Введите логин:")
-			if log in Inimesed:
-				print("Логин успешно введён.")
+			log=input("Sisesta kasutajanimi:")
+			if log in inimesed:
+				print("Sisselogimine õige.")
 				break
-			elif log not in Inimesed:
-				print("Не верный логин.")
+			elif log not in inimesed:
+				print("Sisselogimine ei õige.")
 		while 1:
-			pas=input("Введите пароль:")
-			if pas in Passwords:
-				print("Вы вошли в систему.")
+			pas=input("Sisestage parool:")
+			if pas in normpassword:
+				print("Olete sisse logitud, tere tulemast!")
 				break
-			elif pas not in Passwords:
-				print("Не верный пароль.")
-	elif v==1:#вход как админ
-		print("Вход Администрации...")
+			elif pas not in normpassword:
+				print("Vale salasõna")
+	elif v==2:#Logi sisse administraatorina
+		print("Administraatori sisselogimine.")
 		while 1:
-			log=input("Введите логин:")#Писать Sergei, другое не примит
-			if log in Admin:
-				print("Логин успешно введён.")
+			log=input("Sisestage administraatori sisselogimine:")#Писать Sergei, другое не примит
+			if log in admin:
+				print("Sisselogimine õige.")
 				break
-			elif log not in Admin:
-				print("Не верный логин.")
+			elif log not in admin:
+				print("Sisselogimine ei õige.")
 		while 1:
-			pas=input("Введите пароль:")#Пароль 7493
-			if pas in APasswords:
-				print("Вы вошли в систему.")
+			pas=input("Sisestage parool:")
+			if pas in adminpasswords:
+				print("Olete sisse logitud, tere tulemast!")
 				break
-			elif pas not in APasswords:
-				print("Не верный пароль.")
+			elif pas not in adminpasswords:
+				print("Vale salasõna")
 		break
 while True:
-	print("Что хотите посмотреть?\nCписок сотрудников-[0]\nЗарплата-[1]\nТоп сотрудников-[2]")
+	print("Valikud.\nTöötajate nimekiri-[0]\nPalk-[1]\nTipptöötajad-[2]\nTipprikkad ja vaesed-[3]")
 	n=int(input())
-	print("Загрузка...")
 	if n==0:
-		print("Вход в список сотрудников...")
+		print("Logige sisse töötajate nimekirja")
 		with open("inimesed.txt", "r") as reader:#Читает содержимое файла и выводим на экран
 			print(reader.read())
 	elif n==1:
-		print("Вход в систему зарплаты...")
+		print("Logi sisse palgasüsteemi")
 		with open("raha.txt", "r") as reader:
 			print(reader.read())
 	elif n==2:
-		print("Вход в топ сотрудников...")
+		print("Parima töötaja sisselogimine")
 		with open("top.txt", "r") as reader:
 			print(reader.read())
+	elif n==3:
+		print("Parima töötaja sisselogimine")
+		with open("topfamily.txt", "r") as reader:
+			print(reader.read())
+	elif n==4:
+		print("Parima töötaja sisselogimine")
+		with open("topfamily.txt", "r") as reader:
+			print(reader.read())
+

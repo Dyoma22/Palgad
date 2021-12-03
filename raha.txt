@@ -1,8 +1,7 @@
-Demid - 5000
-Nicole - 3500
-Nastya - 3250
-Nikita - 2500
-Alina - 3000
+Demid - 5000$
+Nicole - 3500$
+Nastya - 3250$
+Nikita - 2500$
 Robert - 3000
 Masha - 1540
 Den - 1400
