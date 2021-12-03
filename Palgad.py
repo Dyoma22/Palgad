@@ -24,11 +24,11 @@ while True:#lõputu tsükkel kuni toimingu sooritamiseni või kuni selle lõpuni
 				break
 			elif pas not in normpassword:#kirjutab tektsi ja kui parooli pole, ei lähe see läbi
 				print("Vale salasõna")
-	elif v==2:
+	elif v==2:#Logige sisse administraatori kontole
 		print("Administraatori sisselogimine.")
 		while 1:
 			log=input("Sisestage administraatori sisselogimine:")
-			if log in admin:
+			if log in admin:#Kui tekstifailis on administraatori nimi, siis see siseneb edukalt, kui mitte, kuid see näitab, et sisselogimine on vale
 				print("Sisselogimine õige.")
 				break
 			elif log not in admin:
@@ -43,37 +43,37 @@ while True:#lõputu tsükkel kuni toimingu sooritamiseni või kuni selle lõpuni
 		break
 while True:
 	print()
-	print("Valikud.\nTöötajate nimekiri - [0]\nPalk - [1]\nTipptöötajad - [2]\nTipprikkad ja vaesed - [3]\nKeskmine palk - [4]")
+	print("Valikud.\nTöötajate nimekiri - [0]\nPalk - [1]\nTipptöötajad - [2]\nTipprikkad ja vaesed - [3]\nKeskmine palk - [4]")#Küsib valida kõigi loetletud funktsioonide hulgast
 	n=int(input())
 	if n==0:
 		print()
 		print("success")
 		print()
-		with open("inimesed.txt", "r") as reader:
+		with open("inimesed.txt", "r") as reader:#Näitab kõiki töötajaid
 			print(reader.read())
 	elif n==1:
 		print()
 		print("Success")
 		print()
-		with open("raha.txt", "r") as reader:
+		with open("raha.txt", "r") as reader:#Näitab töötajate palka
 			print(reader.read())
 	elif n==2:
 		print()
 		print("Success")
 		print()
-		with open("top.txt", "r") as reader:
+		with open("top.txt", "r") as reader:#Näitab töötajate palka
 			print(reader.read())
 	elif n==3:
 		print()
 		print("Success")
 		print()
-		with open("topfamily.txt", "r") as reader:
+		with open("topfamily.txt", "r") as reader:#Näitab vaeste ja rikaste tippu
 			print(reader.read())
 	elif n==4:
 		print()
 		print("Success")
 		print()
-		with open("topnormal.txt", "r") as reader:
+		with open("topnormal.txt", "r") as reader:#Näitab keskmist palka
 			print(reader.read())
 	
 
