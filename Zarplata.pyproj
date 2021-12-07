@@ -28,13 +28,8 @@
     <Compile Include="Palgad.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Inimesed.txt" />
-    <Content Include="adminlogin.txt" />
-    <Content Include="passwordadmin.txt" />
-    <Content Include="password.txt" />
-    <Content Include="raha.txt" />
-    <Content Include="topfamily.txt" />
-    <Content Include="topnormal.txt" />
+    <Content Include="palga.txt" />
+    <Content Include="inimesed.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
