@@ -1,8 +1,8 @@
 def lists()->list:
 	palgad=[]
-	with open("palgad.txt", "r") as f1: #открываем текстовый файл
+	with open("palga.txt", "r") as f1: #открываем текстовый файл
 		for s in f1:
-			palgad.append(s.strip()) # 
+			palga.append(s.strip()) # 
 	inimesed=[]
 	with open ("inimesed.txt", "r") as inimene:
 		for q in inimene:
@@ -14,8 +14,8 @@ def add_person ():
 	palga=input("Введите зарплату - ")
 	with open("inimesed.txt", "a") as inimesed: #Добавляем человека в конец файла
 		inimesed.write(nimi+"\n")	
-	with open("palga.txt", "a") as palgad: #Добавляем зарплату в конец файла
-		palgad.write(palga+"\n")
+	with open("palga.txt", "a") as palga: #Добавляем зарплату в конец файла
+		palga.write(palga+"\n")
 
 def biggest_salary():
 	palga,inimesed=lists()
@@ -24,17 +24,17 @@ def biggest_salary():
 	print("kõike suured palga on "+inimesed[b]+" palga")
 
 def smallest_salary():
-	palgad,inimesed=lists()
-	palgadS=palgad.copy()
-	palgadS.sort()
-	a=palgadS[0]
-	b=palgad.index(a)
-	print("kõike väiksem palga on "+inimesed[b]+" palga ja see on "+ palgadS[0]+" euro")
+	palga,inimesed=lists()
+	palgaW=palgad.copy()
+	palgaW.sort()
+	a=palgaW[0]
+	b=palga.index(a)
+	print("kõike väiksem palga on "+inimesed[b]+" palga ja see on "+ palgaW[0]+" euro")
 
 def keskmine():#вычисляем среднюю зарплату
 	palga,inimesed=lists()
 	summa=0
-	for palk in palgad:
+	for palk in palga:
 		summa+=float(palk)
 	kesk=summa/len(palga)
 	print("keskmine palk "+kesk)
@@ -51,6 +51,6 @@ def sorting():
 	palga,inimesed=lists()
 	palgaW=palgad.copy()
 	palgaW.sort()
-	for palk in palgadS:
-		a=palgad.index(palk) # ищем индекс по переменной и приравниваем к другой переменной чтобы найти имя и зарплату в несортированых списках
+	for palk in palgaW:
+		a=palga.index(palk) # ищем индекс по переменной и приравниваем к другой переменной чтобы найти имя и зарплату в несортированых списках
 		print(palga[a]+" "+inimesed[a])
