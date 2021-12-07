@@ -4,12 +4,12 @@ while True:
 	if w=="1":
 		add_person()
 	elif w=="2":
-		biggest_salary()
+		suurpalk()
 	elif w=="3":
-		smallest_salary()
+		madalpalk()
 	elif w=="4":
 		keskmine()
 	elif w=="5":
-		sorting()
+		sorteerimine()
 	else:
 		("Этой функций нет")

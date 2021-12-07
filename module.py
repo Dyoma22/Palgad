@@ -1,56 +1,56 @@
 def lists()->list:
 	palga=[]
-	with open("palga.txt", "r") as f1: #открываем текстовый файл
-		for s in f1:
-			palga.append(s.strip()) # 
+	with open("palga.txt", "r") as f1: #открывает текстовый файл
+		for n in f1:
+			palga.append(n.strip()) # 
 	inimesed=[]
-	with open ("inimesed.txt", "r") as inimene:
-		for q in inimene:
-			inimesed.append(q.strip())
-	return palga,inimesed
+	with open ("inimesed.txt", "r") as inimene:#открывает текстовый файл
+		for g in inimene:
+			inimesed.append(g.strip())
+	return palga,inimesed#возвращает функции
 
-def add_person ():
-	nimi=input("Введите имя - ")
+def lisaihmine ():#добавляет сотрудника и зарплату
+	name=input("Введите имя - ")
 	palga=input("Введите зарплату - ")
 	with open("inimesed.txt", "a") as inimesed: #Добавляем человека в конец файла
-		inimesed.write(nimi+"\n")	
+		inimesed.write(name+"\n")#пишем имя нового сотрудника
 	with open("palga.txt", "a") as palga: #Добавляем зарплату в конец файла
-		palga.write(palga+"\n")
+		palga.write(palga+"\n")#пишем пароль нового сотрудника
 
-def biggest_salary():
-	palga,inimesed=lists()
-	suurim=max(palga) # поиск и прирвынивание самого большого числа к переменной
-	b=palga.index(suurim) # приравниваем индекс к переменной для дальнейшего использывания
-	print("kõike suured palga on "+inimesed[b]+" palga")
+def suurpalk():#Cамая большая зарплата
+	palga,inimesed=lists()#Приравниваем к списку
+	suurim=max(palga) #Ищем большое число и приравниваем его к переменной
+	b=palga.index(suurim) #Приравниваем индекс к переменной для дальнейшего использывания
+	print("Самая высокая зарплата у "+inimesed[b]+"palga")
 
-def smallest_salary():
+def madalpalk():#Самая маленькая зарплата
 	palga,inimesed=lists()
 	palgaW=palga.copy()
 	palgaW.sort()
-	a=palgaW[0]
-	b=palga.index(a)
-	print("kõike väiksem palga on "+inimesed[b]+" palga ja see on "+ palgaW[0]+" euro")
+	g=palgaW[0]
+	h=palga.index(a)
+	print("Самая маленькая зарплата у "+inimesed[b]+"зарплата составляет"+ palgadS[0]+"евро")
 
 def keskmine():#вычисляем среднюю зарплату
 	palga,inimesed=lists()
-	summa=0
+	summa=0#сумма равна 0
 	for palk in palga:
-		summa+=float(palk)
-	kesk=summa/len(palga)
-	print("keskmine palk "+kesk)
-	vahe=0
+		summa+=float(palk)#вычисляет зарплату
+	kesk=summa/len(palga)#вычислил зарплату
+	print("Средняя зарплата"+kesk)
+	much=0
 	if kesk in palga:
 		kesk=inimesed[palga.index(kesk)]
 		print(kesk)
 	else:
-		kesk="puudub"
+		kesk="lost"
 		print(kesk)
 
-def sorting():
+def sorteerimine():#Сортировка зарплат и имен
 	palgaW=[]
 	palga,inimesed=lists()
 	palgaW=palga.copy()
 	palgaW.sort()
 	for palk in palgaW:
-		a=palga.index(palk) # ищем индекс по переменной и приравниваем к другой переменной чтобы найти имя и зарплату в несортированых списках
+		a=palga.index(palk) #Ищем индекс переменной и приравниваем к другой переменной чтобы найти имя и зарплату
 		print(palga[a]+" "+inimesed[a])
