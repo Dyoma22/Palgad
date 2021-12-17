@@ -1,8 +1,8 @@
 def lists()->list:
-	palga=[]
+	palga=[]#
 	with open("palga.txt", "r") as f1: #открывает текстовый файл
 		for n in f1:
-			palga.append(n.strip()) # 
+			palga.append(n.strip())#добавляет значения в список
 	inimesed=[]
 	with open ("inimesed.txt", "r") as inimene:#открывает текстовый файл
 		for g in inimene:
@@ -10,8 +10,8 @@ def lists()->list:
 	return palga,inimesed#возвращает функции
 
 def lisaihmine ():#добавляет сотрудника и зарплату
-	name=input("Введите имя - ")
-	palga=input("Введите зарплату - ")
+	name=input("Введите имя - ")#вводим имя 
+	palga=input("Введите зарплату - ")#вводим зарплату
 	with open("inimesed.txt", "a") as inimesed: #Добавляем человека в конец файла
 		inimesed.write(name+"\n")#пишем имя нового сотрудника
 	with open("palga.txt", "a") as palga: #Добавляем зарплату в конец файла
@@ -24,12 +24,12 @@ def suurpalk():#Cамая большая зарплата
 	print("Самая высокая зарплата у "+inimesed[b]+"palga")
 
 def madalpalk():#Самая маленькая зарплата
-	palga,inimesed=lists()
+	palga,inimesed=lists()#Приравниваем к списку
 	palgaW=palga.copy()
-	palgaW.sort()
+	palgaW.sort()#сортирует зарплату
 	g=palgaW[0]
-	h=palga.index(a)
-	print("Самая маленькая зарплата у "+inimesed[b]+"зарплата составляет"+ palgadS[0]+"евро")
+	h=palga.index(0)
+	print("Самая маленькая зарплата у "+inimesed[0]+"зарплата составляет"+ palgaW[h]+"евро")
 
 def keskmine():#вычисляем среднюю зарплату
 	palga,inimesed=lists()
